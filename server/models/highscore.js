@@ -4,8 +4,7 @@ let Highscore = mongoose.model('Highscore', {
     player: {
         type: String,
         trim: true,
-        required: true,
-        unique: true
+        required: true
     },
     score: {
         type: Number,
