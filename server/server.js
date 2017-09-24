@@ -25,7 +25,7 @@ app.get('/highscore/listbygame/:game', (req, res) => {
     console.log(game);
     if(game === null) return res.status(400).send();
 
-    Highscore.find({game}).then((highscores) => {
+    Highscore.find({game}).sort({score: 'desc'}).limit(10).then((highscores) => {
         if(!highscores) return res.status(404).send();
 
         res.send(highscores);
