@@ -1,0 +1,33 @@
+{
+  "name": "highscore-counter",
+  "version": "1.0.0",
+  "description": "Simple API to save Highscore of my games",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha server/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurBOliveira/Highscore-Counter.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "Arthur B. de Oliveira",
+  "license": "MIT",
+  "engines": {
+    "node": "8.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ArthurBOliveira/Highscore-Counter/issues"
+  },
+  "homepage": "https://github.com/ArthurBOliveira/Highscore-Counter#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "expect": "^21.1.0",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.12",
+    "supertest": "^3.0.0"
+  }
+}
