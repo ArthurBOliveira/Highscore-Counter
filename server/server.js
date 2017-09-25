@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 let {mongoose} = require('./db/mongoose');
 let {Highscore} = require('./models/highscore');
@@ -8,6 +9,10 @@ let app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname+'/index.html'));
+});
 
 app.get('/highscore', (req, res) => {
     Highscore.find().then((highscores) => {
